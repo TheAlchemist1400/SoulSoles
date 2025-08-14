@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x$*h0==+0efl5#5d5(aa%^lwxifhn^w=l$o$zk9gr-kh-a5km6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'soulsoles_project.urls'
@@ -119,7 +120,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'store', 'static'),  # adjust if your app is named differently
+    os.path.join(BASE_DIR, 'store', 'static', 'staticfiles'),  # adjust if your app is named differently
 ]
 
 
@@ -134,3 +135,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_REDIRECT_URL = 'home' # Direct home after logging in
 LOGOUT_REDIRECT_URL = 'home' # Direct home after logging out
 ALLOWED_HOSTS = ['*']
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
