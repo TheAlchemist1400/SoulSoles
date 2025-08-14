@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-x$*h0==+0efl5#5d5(aa%^lwxifhn^w=l$o$zk9gr-kh-a5km6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'store',
+]
+
+INSTALLED_APPS += [
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -122,7 +127,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'store', 'static', 'staticfiles'),  # adjust if your app is named differently
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+DEFAULT_AUTO_FIELD = 'cloudnairy_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dcvzezg5m',  
+    'API_KEY': '126173615777593',
+    'API_SECRET': '6YYJf0SMyIgzQl_B3n8GVKiCAjY',
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
