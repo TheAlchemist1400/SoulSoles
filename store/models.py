@@ -3,6 +3,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.conf import settings
+from cloudinary.models import CloudinaryField 
 
 
 # Create your models here.
@@ -10,7 +11,7 @@ class Sneaker(models.Model):
     name = models.CharField(max_length = 100)
     short_description = models.TextField(max_length = 350, blank = True)
     description = models.TextField()
-    image = models.ImageField(upload_to='sneakers/')
+    image = CloudinaryField('image')
     original_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)  # original price
     on_sale = models.BooleanField(default=False)
     
@@ -36,7 +37,7 @@ class SneakerSize(models.Model):
     
 class SneakerImage(models.Model):
     sneaker = models.ForeignKey(Sneaker, on_delete=models.CASCADE, related_name='images')
-    image = models.ImageField(upload_to='sneaker_gallery/')    
+    image = CloudinaryField('image')   
     
     def __str__(self):
         return f"Extra image for {self.sneaker.name}"
