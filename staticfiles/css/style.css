@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #ccc5c5;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#sneaker-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.home-content-container {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+
+    background-color: rgba(231, 227, 227, 0.4);
+    backdrop-filter: blur(10px); /* Glass blur */
+    -webkit-backdrop-filter: blur(10px); /* Ensures safari support */
+
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+
+    color: white;
+}
+
+.subtitle {
+    color: lightgray;
+}
+
+
+.floating-rotating {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+
+    animation: rotate 5s linear infinite, float 3s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    from {transform: translate(-50, -50) rotate(0deg); }
+    to  {transform: translate(-50, -50) rotate(360deg); }
+}
+
+@keyframes float {
+    0%, 100% {top: 50%; }
+    50% {top: 45%; }
+}

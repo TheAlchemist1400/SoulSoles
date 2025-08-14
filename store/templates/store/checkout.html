@@ -1,0 +1,35 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<h2>Checkout</h2>
+
+{% if cart %}
+    <ul class="list-group mb-3">
+        {% for item in cart %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{ item.sneaker_size.sneaker.name }} (Size: {{ item.sneaker_size.size }})
+                <span>R{{item.sneaker_size.price }}</span>
+            </li>
+        {% endfor %}    
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <strong>Total:</strong>
+            <strong>R{{ total }}</strong>
+        </li>
+    </ul>
+    <!--Saves data to database-->
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" name="name" class="form-control" requires>
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Delivery address</label>
+            <textarea name="address" class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Place Order</button>
+    </form>
+    {% else %}
+        <p>Your cart is empty</p>
+    {% endif %}
+    {% endblock %}        

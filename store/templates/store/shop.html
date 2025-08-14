@@ -1,0 +1,68 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<h2 class="mb-4 text-center">Shop All Sneakers</h2>
+
+<div class="row">
+  {% for sneaker in sneakers %}
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 position-relative shadow">
+        <a href="{% url 'sneaker_detail' sneaker.pk %}">
+          <img src="{{ sneaker.image.url }}" class="card-img-top" style="height: 300px; object-fit: cover;">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="{% url 'sneaker_detail' sneaker.pk %}" class="text-dark text-decoration-none">
+              {{ sneaker.name }}
+            </a>
+          </h5>
+
+          {% comment %} Price display logic {% endcomment %}
+          {% with min_price=None min_original_price=None %}
+            {% for size in sneaker.sizes.all %}
+              {% if not size.is_sold_out and size.price %}
+                {% if min_price == None or size.price < min_price %}
+                  {% with size.price as min_price %}
+                  {% with size.original_price as min_original_price %}
+                  {% endwith %}
+                  {% endwith %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+
+            {% if min_price %}
+              {% if sneaker.on_sale and min_original_price and min_original_price > min_price %}
+                <p class="mb-1">
+                  <span style="color: red; font-weight: bold;">R {{ min_price }}</span>
+                  <span style="text-decoration: line-through; color: gray; margin-left: 8px;">R {{ min_original_price }}</span>
+                  <span style="color: green; font-weight: bold; margin-left: 8px;">On Sale!</span>
+                </p>
+              {% else %}
+                <p class="mb-1">Starting from <strong>R {{ min_price }}</strong></p>
+              {% endif %}
+            {% endif %}
+          {% endwith %}
+
+          {% with available_sizes=sneaker.sizes.all|dictsort:"size" %}
+            <p class="text-muted small mb-0">
+              Sizes:
+              {% for size in available_sizes %}
+                {% if not size.is_sold_out %}
+                  {{ size.size }}{% if not forloop.last %}, {% endif %}
+                {% endif %}
+              {% endfor %}
+            </p>
+          {% endwith %}
+
+          <a href="{% url 'sneaker_detail' sneaker.pk %}" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+  {% empty %}
+    <p>No sneakers available yet.</p>
+  {% endfor %}
+</div>
+
+{% endblock %}

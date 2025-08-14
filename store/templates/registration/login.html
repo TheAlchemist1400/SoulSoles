@@ -1,0 +1,19 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+    <h2>Login</h2>
+
+    {% if messages %}
+        {% for messages in messages %}
+            <div class="alert" style = "color: red">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Login </button>
+        <a button type="submit" href="{% url 'home' %}" class="btn btn-secondary"> Home</a>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'store/base.html' %}
+{% block content %}
+<h2>Profile</h2>
+<ul class="list-group">
+    <li class="list-group-item">Username: {{ user.username }}</li>
+    <li class="list-group-item">Email: {{ user.email }}</li>
+    <li class="list-group-item">Phone number: {{ user.phonenumber }}</li>
+</ul>
+{% endblock %}

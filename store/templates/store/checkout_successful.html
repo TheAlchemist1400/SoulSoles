@@ -1,0 +1,32 @@
+{% extends 'store/base.html' %}
+{% block content %}
+
+<h1>Order Confirmation</h1>
+<h2>Thanks You for Shopping with SoulSole!</h2>
+
+<p>Your order has been successfully been placed to and is now <b>pending payment</b></p>
+<p style="color: gray">PayFast payment coming soon... </p>
+<p>Please complete your payment to complete your order of <strong>R {{ order.total }}</strong> using the details below:</p>
+
+<ul>
+    <li><strong>Bank:</strong> ABSA</li>
+    <li><strong>Account Name:</strong> Amando Moabi</li>
+    <li><strong>Account Number:</strong> 9352857011</li>
+    <li><strong>Payment reference:</strong> {{ order.id }} </li>
+</ul>
+
+<p style="color:red; font-weight: bold;" >
+    <em>⚠ IMPORTANT:</em> USE YOUR PAYMENT REFERENCE EXACTLY AS SHOWN TO AVOID DELAYS IN PROCESSING YOUR ORDER.
+</p> 
+
+<hr>
+<h3>How Escrow Protection Works</h3>
+<ol>
+    <li>Once we confirm payment, your order will be prepared for shipping and be shipped within 72 business hours</li>
+    <li>Your payment will be securely held in our <strong>Escrow Protection </strong> account until you receive your order.</li>
+    <li>We will only gain access to your payment once you receive and confirm your order.</li>
+    <li>We'll notify you every step of the way via email. You can track your order anytime once shipped from <a  href = "{% url 'account_orders' %}">Order History</a> page.</li>
+</ol>
+<hr>
+
+{% endblock %}
