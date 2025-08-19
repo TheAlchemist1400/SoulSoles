@@ -12,11 +12,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
-#import cloudinary 
+import cloudinary 
 #import cloudinary.uploader
 #import cloudinary.api
-#from cloudinary.utils import cloudinary_url
-
+from decouple import config 
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,12 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x$*h0==+0efl5#5d5(aa%^lwxifhn^w=l$o$zk9gr-kh-a5km6'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 
 # Application definition
@@ -45,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'store',
+    # Saves pictures to cloud 
     'cloudinary',
     'cloudinary_storage',
 ]
@@ -65,10 +65,11 @@ ROOT_URLCONF = 'soulsoles_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -128,26 +129,27 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'store', 'static'),  # adjust if your app is named differently
+    os.path.join(BASE_DIR, 'store', 'static')  # adjust if your app is named differently
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dcvzezg5m',  
-    'API_KEY': '126173615777593',
-    'API_SECRET': '6YYJf0SMyIgzQl_B3n8GVKiCAjY',
-}
+# Cloudinary
+cloudinary.config(
+    cloud_name = config('CLOUD_NAME'),
+    api_key = config('CLOUD_API_KEY'),
+    api_secret = config('CLOUD_API_SECRET')    
+) 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-#MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-LOGIN_URl = '/'
+LOGIN_URL = '/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_REDIRECT_URL = 'home' # Direct home after logging in
 LOGOUT_REDIRECT_URL = 'home' # Direct home after logging out
