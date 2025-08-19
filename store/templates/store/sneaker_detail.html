@@ -1,86 +1,96 @@
 {% extends 'store/base.html' %}
 {% load static %}
 {% block content %}
-  <h1>{{ sneaker.name }}</h1>
+
+<div class="container my-4">
+
+  <!-- Sneaker Name -->
+  <h1 class="mb-3">{{ sneaker.name }}</h1>
 
   <!-- Image row: main image + extra images -->
-  <div style="display: flex; gap: 30px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
+  <div class="row mb-3">
     <!-- Main Image -->
-    <img src="{{ sneaker.image.url }}" alt="{{ sneaker.name }}" style="height: 350px; border-radius: 5px; object-fit: cover;">
+    <div class="col-12 col-md-6 mb-3">
+      <img src="{{ sneaker.image.url }}" 
+           alt="{{ sneaker.name }}" 
+           class="img-fluid rounded" 
+           style="max-height: 350px; object-fit: cover;">
+    </div>
 
     <!-- Extra Images -->
     {% for img in images %}
-      <img src="{{ img.image.url }}" alt="Extra image" style="height: 200px; border-radius: 5px; object-fit: cover;">
+      <div class="col-6 col-md-3 mb-3">
+        <img src="{{ img.image.url }}" 
+             alt="Extra image" 
+             class="img-fluid rounded" 
+             style="max-height: 200px; object-fit: cover;">
+      </div>
     {% endfor %}
   </div>
 
   <!-- Sneaker Descriptions -->
-  <p style="font-size: 16px; font-weight: bold;">{{ sneaker.short_description }}</p>
-  <p style="font-size: 16px; max-width: 1200px;">{{ sneaker.description }}</p>
+  <p class="fw-bold">{{ sneaker.short_description }}</p>
+  <p style="max-width: 100%;">{{ sneaker.description }}</p>
 
   <!-- Dynamic Price Area -->
-  <div id="price-display" style="font-size: 18px; margin-top: 20px; font-weight: bold;">
+  <div id="price-display" class="mb-3 fw-bold" style="font-size: 1.2rem;">
     {% if first_available_size %}
       {% if first_available_size.original_price and first_available_size.price < first_available_size.original_price %}
-        <span id="sale-price" style="color: red;">R {{ first_available_size.price }}</span>
-        <span id="original-price" style="text-decoration: line-through; color: gray; margin-left: 10px;">R {{ first_available_size.original_price }}</span>
-        <span style="color: green; font-weight: bold; margin-left: 10px;">On Sale</span>
+        <span id="sale-price" class="text-danger">R {{ first_available_size.price }}</span>
+        <span id="original-price" class="text-muted text-decoration-line-through ms-2">R {{ first_available_size.original_price }}</span>
+        <span class="text-success ms-2">On Sale</span>
       {% else %}
         <span id="sale-price">R {{ first_available_size.price }}</span>
       {% endif %}
     {% endif %}
   </div>
 
-  <!-- Size Selection Form with POST, replaced GET -->
-   {% if has_available_size %}
-    <form method="post" action="{% url 'add_to_cart' first_available_size.id %}">
+  <!-- Size Selection Form -->
+  {% if has_available_size %}
+    <form method="post" action="{% url 'add_to_cart' first_available_size.id %}" class="mb-4">
       {% csrf_token %}
-      <div style="margin-top: 20px;">
-        <label for="size">Select Size: </label>
-        <select name="size" id="size" onchange="handleSizeChange(this)" style="padding: 8px; margin-left: 10px;">
+      <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-2">
+        <label for="size" class="mb-1 mb-sm-0">Select Size:</label>
+        <select name="size" id="size" class="form-select w-auto" onchange="handleSizeChange(this)">
           {% for size in available_sizes %}
             <option value="{{ size.id }}" data-price="{{ size.price }}" data-original="{{ size.original_price }}">{{ size.size }} — R {{ size.price }}</option>
           {% endfor %}
         </select>
-        <button type="submit" style="padding: 8px 15px; margin-left: 10px;">Add to Cart</button>
+        <button type="submit" class="btn btn-primary">Add to Cart</button>
       </div>
     </form>
   {% else %}
-    <p style="color: red; font-weight: bold; margin-top: 20px;">Sold Out</p>
+    <p class="text-danger fw-bold">Sold Out</p>
   {% endif %}
 
-  <script>
-    function handleSizeChange(select) {
-      const selected = select.options[select.selectedIndex];
-      const price = selected.getAttribute('data-price');
-      const original = selected.getAttribute('data-original');
-      const priceDisplay = document.getElementById('price-display');
+</div>
 
-      // Update action of the form based on selected size ID
-      const form = select.closest('form');
-      form.action = '/add-to-cart/' + selected.value + '/';
+<script>
+function handleSizeChange(select) {
+  const selected = select.options[select.selectedIndex];
+  const price = selected.getAttribute('data-price');
+  const original = selected.getAttribute('data-original');
+  const priceDisplay = document.getElementById('price-display');
+  const form = select.closest('form');
+  form.action = '/add-to-cart/' + selected.value + '/';
 
-      if (original && parseFloat(original) > parseFloat(price)) {
-        priceDisplay.innerHTML = `
-          <span id="sale-price" style="color: red;">R ${price}</span>
-          <span id="original-price" style="text-decoration: line-through; color: gray; margin-left: 10px;">R ${original}</span>
-          <span style="color: green; font-weight: bold; margin-left: 10px;">On Sale</span>
-        `;
-      } else {
-        priceDisplay.innerHTML = `<span id="sale-price">R ${price}</span>`;
-      }
-    }
+  if (original && parseFloat(original) > parseFloat(price)) {
+    priceDisplay.innerHTML = `
+      <span id="sale-price" class="text-danger">R ${price}</span>
+      <span id="original-price" class="text-muted text-decoration-line-through ms-2">R ${original}</span>
+      <span class="text-success ms-2">On Sale</span>
+    `;
+  } else {
+    priceDisplay.innerHTML = `<span id="sale-price">R ${price}</span>`;
+  }
+}
 
-    window.onload = function () {
-      updatePrice();
-    };
+window.onload = updatePrice;
 
-    function updatePrice() {
-      const select = document.getElementById('size');
-      if (select) {
-        handleSizeChange(select);
-      }
-    }
-  </script>
+function updatePrice() {
+  const select = document.getElementById('size');
+  if (select) handleSizeChange(select);
+}
+</script>
 
 {% endblock %}

@@ -10,7 +10,7 @@
     <div class="col-md-4 mb-4">
       <div class="card h-100 position-relative shadow">
         <a href="{% url 'sneaker_detail' sneaker.pk %}">
-          <img src="{{ sneaker.image.url }}" class="card-img-top" style="height: 300px; object-fit: cover;">
+          <img src="{{ sneaker.image.url }}" alt="Logo" class="card-img-top img-fluid" style="height: auto; max-height: 300px; object-fit: cover;">
         </a>
         <div class="card-body">
           <h5 class="card-title">
