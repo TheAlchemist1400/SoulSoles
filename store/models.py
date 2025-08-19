@@ -5,7 +5,6 @@ from django.utils import timezone
 from django.conf import settings
 from cloudinary.models import CloudinaryField 
 
-
 # Create your models here.
 class Sneaker(models.Model):
     name = models.CharField(max_length = 100)
