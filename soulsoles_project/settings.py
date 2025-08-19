@@ -13,8 +13,6 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 import cloudinary 
-#import cloudinary.uploader
-#import cloudinary.api
 from decouple import config 
 
 
@@ -26,12 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY', 'fallback-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool)
-
-ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
+DEBUG = os.environ.get('DEBUG', 'False').lower() in ('true', '1', 't')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 
 
 # Application definition
@@ -136,9 +133,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Cloudinary
 cloudinary.config(
-    cloud_name = config('CLOUD_NAME'),
-    api_key = config('CLOUD_API_KEY'),
-    api_secret = config('CLOUD_API_SECRET')    
+    cloud_name =config('CLOUD_NAME'),
+    api_key =config('CLOUD_API_KEY'),
+    api_secret =config('CLOUD_API_SECRET')    
 ) 
 
 # Default primary key field type
