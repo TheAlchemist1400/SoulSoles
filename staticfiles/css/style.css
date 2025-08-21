@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    overflow: hidden;
     background-color: #ccc5c5;
     color: white;
     font-family: Arial, sans-serif;
@@ -14,24 +13,23 @@ body {
     height: 100%;
     z-index: -1;
 }
-@media (max-width: 768px) {
-    .home-content-container {
-        position: relative;
-        z-index: 10;
-        max-width: 95%;
-        margin: 0 auto;
-        padding: 20px;
 
-        background-color: rgba(231, 227, 227, 0.4);
-        backdrop-filter: blur(10px); /* Glass blur */
-        -webkit-backdrop-filter: blur(10px); /* Ensures safari support */
+.home-content-container {
+    position: relative;
+    z-index: 10;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
 
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(231, 227, 227, 0.4);
+    backdrop-filter: blur(10px); /* Glass blur */
+    -webkit-backdrop-filter: blur(10px); /* Ensures safari support */
 
-        color: white;
-    }
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+
+    color: white;
 }
 
 .subtitle {
@@ -51,9 +49,49 @@ body {
     animation: rotate 5s linear infinite, float 3s ease-in-out infinite;
 }
 
+/* Adjust to tablets and phones */
+@media (max-width: 1024px) {
+    .home-content-container {
+        padding: 30px;
+        margin: 30px auto;
+    }
+
+    .floating-rotating {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content-container {
+        max-width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+        font-size: 14px;
+    }
+
+    .floating-rotating {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content-container {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .floating-rotating {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Floating blue box */
 @keyframes rotate {
-    from {transform: translate(-50, -50) rotate(0deg); }
-    to  {transform: translate(-50, -50) rotate(360deg); }
+    from {transform: translate(-50%, -50%) rotate(0deg); }
+    to  {transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 @keyframes float {
