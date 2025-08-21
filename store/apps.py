@@ -18,14 +18,3 @@ def create_superuser(sender, **kwargs):
             password = "StrongPassword123!")
     
     print("Superuser created: adminfix / StrongPassword123!")
- 
-@receiver(post_migrate)
-def create_superuser(sender, **kwargs):
-    User = get_user_model()
-    if not User.objects.filter(username = "adminfix").exists():
-        User.objects.create_superuser(
-            username = "adminfix",
-            email = "emailfix@example.com",
-            password = "StrongPassword123!")
-    
-    print("Superuser created: adminfix / StrongPassword123!")

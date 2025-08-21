@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    overflow: hidden;
     background-color: #ccc5c5;
     color: white;
     font-family: Arial, sans-serif;
@@ -14,23 +13,24 @@ body {
     height: 100%;
     z-index: -1;
 }
-    .home-content-container {
-        position: relative;
-        z-index: 10;
-        max-width: 95%;
-        margin: 0 auto;
-        padding: 20px;
 
-        background-color: rgba(231, 227, 227, 0.4);
-        backdrop-filter: blur(10px); /* Glass blur */
-        -webkit-backdrop-filter: blur(10px); /* Ensures safari support */
+.home-content-container {
+    position: relative;
+    z-index: 10;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
 
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(231, 227, 227, 0.4);
+    backdrop-filter: blur(10px); /* Glass blur */
+    -webkit-backdrop-filter: blur(10px); /* Ensures safari support */
 
-        color: white;
-    }
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+
+    color: white;
+}
 
 .subtitle {
     color: lightgray;
@@ -90,8 +90,8 @@ body {
 
 /* Floating blue box */
 @keyframes rotate {
-    from {transform: translate(-50, -50) rotate(0deg); }
-    to  {transform: translate(-50, -50) rotate(360deg); }
+    from {transform: translate(-50%, -50%) rotate(0deg); }
+    to  {transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 @keyframes float {

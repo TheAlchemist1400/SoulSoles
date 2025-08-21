@@ -1,0 +1,1010 @@
+[
+    {
+        "model": "store.sneaker",
+        "pk": 1,
+        "fields": {
+            "name": "Dr. MARTENS \u256b A BATHING APE \u256b mastermind JAPAN",
+            "short_description": "In a new three-way collaboration, Dr. Martens has partnered with Japanese streetwear labels A BATHING APE and mastermind JAPAN to revamp the 1461 shoe",
+            "description": "In a new three-way collaboration, Dr. Martens has partnered with Japanese streetwear labels A BATHING APE and mastermind JAPAN to revamp the 1461 shoe, merging subcultures alongside the brand identities.\r\n\r\nWith the release of the BAPE x Mastermind Japan x Dr. Martens 1461 \u00e6Skull,\u00c6 three worlds collide in a new three-way collaboration to create a lace-up that merges subcultures from East and West. Dr. Martens\u00c6 iconic 1461 silhouette features a black leather upper with Mastermind\u00c6s skull and crossbones logo on the right side of both shoes, and BAPE\u00c6s signature Shark icon on the left side of each shoe. While the sock liner displays the logos of all three creative partners. Signature yellow welt stitching attaches the upper to the air-cushioned rubber sole.",
+            "image": "image/upload/v1755599894/iynjh8v4krfvkyg1sdro.webp",
+            "original_price": null,
+            "on_sale": true
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 2,
+        "fields": {
+            "name": "LEVI'S x NIKE AIR MAX 95 DENIM 'White'",
+            "short_description": "It\u00c6s a massive year for Sergio Lozano\u00c6s iconic Nike Air Max 95 as it celebrates its 30th anniversary. After dropping in several Big Bubble OG variants, the AM95 arrives with limited Levi Strauss renditions in premium denim fabrics, expanding the Swoosh\u00c6s effort to replicate the success of the Air Jordan 4 collaboration in 18.",
+            "description": "Two titans of American culture join forces once again. Our latest collaboration with Nike celebrates the authentic craftsmanship and innovative spirit both brands embody, featuring sport-inspired style through meticulously designed pieces that honor our legacies.\r\n\r\nThese limited-edition Nike Air Max 95 Sneakers feature 14-ounce indigo denim construction with a matte navy sole and midsole that replaces the typical semi-gloss finish. We also added exclusive details like our iconic red tab under the Nike swoosh and red Levi's\u00ab branding on the shank.",
+            "image": "image/upload/v1755599276/zixnmrwjkmz9czvspkpf.webp",
+            "original_price": null,
+            "on_sale": false
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 3,
+        "fields": {
+            "name": "LEVI'S x NIKE AIR MAX 95 DENIM 'Black'",
+            "short_description": "It\u00c6s a massive year for Sergio Lozano\u00c6s iconic Nike Air Max 95 as it celebrates its 30th anniversary. After dropping in several Big Bubble OG variants, the AM95 arrives with limited Levi Strauss renditions in premium denim fabrics, expanding the Swoosh\u00c6s effort to replicate the success of the Air Jordan 4 collaboration in \u00e618.",
+            "description": "Two titans of American culture join forces once again. Our latest collaboration with Nike celebrates the authentic craftsmanship and innovative spirit both brands embody, featuring sport-inspired style through meticulously designed pieces that honor our legacies.\r\n\r\nThese limited-edition Nike Air Max 95 Sneakers feature 14-ounce indigo denim construction with a matte navy sole and midsole that replaces the typical semi-gloss finish. We also added exclusive details like our iconic red tab under the Nike swoosh and red Levi's\u00ab branding on the shank.",
+            "image": "image/upload/v1755599247/jehzn5bcylojcjas2ttx.webp",
+            "original_price": null,
+            "on_sale": false
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 4,
+        "fields": {
+            "name": "BAPE x adidas Stan Smith 30th Anniversary",
+            "short_description": "BAPE, the fashion icon celebrating its 30th year, teams up with adidas. The Stan Smith in Cloud White, merges BAPE\u00c6s unique style with adidas\u00c6 timeless classic.",
+            "description": "Since its 1963 introduction, the Stan Smith has been one of the most popular silhouettes in the adidas catalog. Although crafted as a tennis shoe after the former professional tennis player, the Stan Smith quickly moved from the court to the street as a casual, yet functional pair of sneakers. Now the shoes are getting a new life as adidas has again teamed up with BAPE to present a new iteration of the signature silhouette. White colorway with an embossed synthetic leather camo upper, which is crafted from 60% recycled materials. Other details on the show include gold foil co-branded details, an ABC CAMO Heel Mustache and gold \u00e630th Anniversary\u00c6 lace jewels.",
+            "image": "image/upload/v1755599199/h50zhtorcey5urezjecm.webp",
+            "original_price": "4200.00",
+            "on_sale": true
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 5,
+        "fields": {
+            "name": "Bathing Ape x ASICS Gel Kayano",
+            "short_description": "The ASICS GEL-Kayano Trainer is taking a walk on the wild side, coming through with an bapes animalistic aesthetic",
+            "description": "Featuring BAPE\u00c6s signature desert camo pattern on the upper, brown suede panels makeup the overlays, while the Tiger stripes are worked into the lacing system. A hit of pink marks the outsole\u00c6s toe and heel, and BAPE\u00c6s logo emerges on the heel and camo-print footbed.\r\nOver a decade rare, dropped in November 2015",
+            "image": "image/upload/v1755599181/okptc3gctkbd5ecglmmo.jpg",
+            "original_price": null,
+            "on_sale": true
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 6,
+        "fields": {
+            "name": "Nike Air Max 1 Patta - Dark Russet",
+            "short_description": "Born from a collaboration between Patta and Nike, these Air Max 1 sneakers were inspired by the connection between the Amsterdam-based brand and its community. They stand out because of their wave pattern on the mudguard,",
+            "description": "Dressed in a Dark Russet and Metallic Silver color scheme. This offering of the Nike Air Max 1 comes constructed in a mesh and leather build with signature wavy mudguards. Co-branded tongue tags, insoles, and packaging with extra set of laces completes the design.",
+            "image": "image/upload/v1755599161/edszfislvnak4pqe3irf.png",
+            "original_price": null,
+            "on_sale": true
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 7,
+        "fields": {
+            "name": "Nike Air Max 95 Corteiz Honey Black",
+            "short_description": "The tour yellow Air Max units punch through the black midsole with energy, while the clean sockliner ditches camo for a glossy black finish, setting this iteration apart from previous releases. Designed for the streets but ready for anything.",
+            "description": "The Nike Air Max 95 Corteiz Honey Black taps into bold energy with a rugged, tactical spin. Built atop a black leather upper with diamond-knit mesh, this pair leans into a utilitarian vibe that doesn\u00c6t sacrifice style. The layered netting, beefed-up tongue and collar, and toggle lacing system all serve up function and fashion in equal measure\u00f9perfect for those constantly on the move.",
+            "image": "image/upload/v1755599138/uiyiuvvokk8zlarvsm1i.jpg",
+            "original_price": null,
+            "on_sale": true
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 9,
+        "fields": {
+            "name": "Atmos x Air Max 95 DLX",
+            "short_description": "This Nike Air Max 95 collab with Japanese sneaker boutique Atmos is one of the most sought-after designs made of rich suede and faux hair on the upper to create a very wild look.",
+            "description": "The atmos x Air Max 95 DLX is inspired by the 2006 collaboration between Nike and atmos. For this updated edition of the original design, Nike has reconnected with the Japanese sneaker boutique to once again create a shoe dressed in pony, tiger, zebra, and leopard prints. The 2018 Air Max 95 features suede materials complemented with red, white, and green accents. This design represents one half of Nike\u00c6s 2018 'Animal Pack' with atmos, the other being an Air Max 1.",
+            "image": "image/upload/v1755599812/wdtbsocummlolzo0ed9e.jpg",
+            "original_price": null,
+            "on_sale": false
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 10,
+        "fields": {
+            "name": "Supreme \u256b NIKE AIR MAX 1 '87 SP BLACK'",
+            "short_description": "Supreme branding seems minimal via the small box logo on the tongue, but the brand\u00c6s namesake is etched into the midsole at the heel \u00f9 a true first for the Air Max 1.",
+            "description": "The Supreme x Nike Air Max 1 '87 SP 'Black White' delivers layered black leather on the upper, featuring a white snakeskin-textured Swoosh and 'World Famous' rendered in embroidered script on the back heel. A white mini-Swoosh embellishes the lateral forefoot, while dual branding appears on the tongue tag and sockliner. The sneaker rests on a matching black polyurethane midsole with visible Air-sole cushioning in the heel.",
+            "image": "image/upload/v1755599030/h9apbjdzr74kqcidadfb.webp",
+            "original_price": null,
+            "on_sale": false
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 11,
+        "fields": {
+            "name": "Supreme \u256b NIKE AIR MAX 1 '87 SP VARSITY PURPLE'",
+            "short_description": "Supreme branding seems minimal via the small box logo on the tongue, but the brand\u00c6s namesake is etched into the midsole at the heel \u00f9 a true first for the Air Max 1.",
+            "description": "Launching as part of a four-piece footwear pack, the Supreme x Nike Air Max 1 '87 SP 'Varsity Purple' features a layered violet leather upper with a snakeskin-textured Swoosh in contrasting white leather. An embroidered mini-Swoosh adorns the lateral forefoot. In addition to a co-branded tongue tag, unique details include Supreme lace dubraes and 'World Famous' inscribed across the back heel. Lightweight cushioning arrives via a white polyurethane midsole with an exposed Max Air unit in the heel.",
+            "image": "image/upload/v1755599005/fzzfc9mjdgvjzvxihtup.webp",
+            "original_price": null,
+            "on_sale": false
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 12,
+        "fields": {
+            "name": "Supreme \u256b NIKE AIR MAX 1 '87 SP TRIPLE WHITE'",
+            "short_description": "Supreme branding seems minimal via the small box logo on the tongue, but the brand\u00c6s namesake is etched into the midsole at the heel \u00f9 a true first for the Air Max 1.",
+            "description": "The Supreme x Nike Air Max 1 '87 SP 'Triple White' showcases a white leather upper accented with a snakeskin-textured Swoosh, Supreme lace jewels, and 'World Famous' embroidered on the back heel. A mini-Swoosh adorns the lateral forefoot, while the co-branded tongue tag displays a crimson box logo, bringing a contrasting pop of color to the monochrome design. Anchoring the sneaker is a matching white polyurethane midsole with exposed Air-sole cushioning in the heel.",
+            "image": "image/upload/v1755598983/ocyx7azlzl4iurkzez3y.webp",
+            "original_price": null,
+            "on_sale": false
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 13,
+        "fields": {
+            "name": "NikeCraft General Purpose Shoe 'Brown'",
+            "short_description": "Beauty is not limited to youth. Novelty gives way to true character and things of quality improve with wear. From entropy to repair, you and your tools shape one another. These sneakers can be bought\u00f9what you do in them cannot.",
+            "description": "We designed these sneakers for extended play. They are made to be scuffed, shredded, patched, glued, scrubbed and thrashed again. Everything eventually falls apart, so we design to delay the inevitable, to prolong that sublime space between box-fresh and worn-to-pieces. These are pressure-tested sneakers. Built-for-decay sneakers. Full-circle, signs-of-life, tough-to-fake sneakers.",
+            "image": "image/upload/v1755598956/fqfnqxdqvczmkb2lomak.avif",
+            "original_price": null,
+            "on_sale": false
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 14,
+        "fields": {
+            "name": "Air Max 90 x Slawn 'Black'",
+            "short_description": "Slawn, Nigerian artist and designer, teams up with Nike to put his own spin on the Air Max 90. Known for large-scale paintings, sculptures and design.",
+            "description": "Slawn takes the iconic sneaker to another dimension with a generous dose of speckling and texture. An embossed design adds depth and complexity, while the revamped mudguard creates a more streamlined look. Mixing real and synthetic leather in a stealthy black colorway, the Air Max 90 comes complete with Max Air cushioning for supreme comfort. Lace up and give a nod to Slawn and his ingenious reimagining of an all-time classic.",
+            "image": "image/upload/v1755598933/e2xhpafvfcwko87bvtel.avif",
+            "original_price": null,
+            "on_sale": false
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 15,
+        "fields": {
+            "name": "Air Max 90 x Slawn 'Sail'",
+            "short_description": "Slawn, Nigerian artist and designer, teams up with Nike to put his own spin on the Air Max 90. Known for large-scale paintings, sculptures and design.",
+            "description": "Slawn takes the iconic sneaker to another dimension with a generous dose of speckling and texture. An embossed design adds depth and complexity, while the revamped mudguard creates a more streamlined look. Mixing real and synthetic leather in a neutral Sail and white color combo, the Air Max 90 comes complete with Max Air cushioning for supreme comfort. Lace up and give a nod to Slawn and his ingenious reimagining of an all-time classic.",
+            "image": "image/upload/v1755598865/i9hjiggw0ir9wjy4tvn3.avif",
+            "original_price": null,
+            "on_sale": false
+        }
+    },
+    {
+        "model": "store.sneaker",
+        "pk": 16,
+        "fields": {
+            "name": "Air Max 90 x Slawn 'Sail' (signed)",
+            "short_description": "Slawn, Nigerian artist and designer, teams up with Nike to put his own spin on the Air Max 90. Known for large-scale paintings, sculptures and design.",
+            "description": "Slawn takes the iconic sneaker to another dimension with a generous dose of speckling and texture. An embossed design adds depth and complexity, while the revamped mudguard creates a more streamlined look. Mixing real and synthetic leather in a neutral Sail and white color combo, the Air Max 90 comes complete with Max Air cushioning for supreme comfort. Lace up and give a nod to Slawn and his ingenious reimagining of an all-time classic.",
+            "image": "image/upload/v1755598830/dc1nculjnshsvjbcsljb.avif",
+            "original_price": null,
+            "on_sale": false
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 1,
+        "fields": {
+            "sneaker": 1,
+            "size": "5",
+            "price": "3500.00",
+            "is_sold_out": true,
+            "original_price": "50000.00",
+            "quantity": 0
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 2,
+        "fields": {
+            "sneaker": 2,
+            "size": "6",
+            "price": "8700.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 3,
+        "fields": {
+            "sneaker": 2,
+            "size": "7",
+            "price": "8700.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 4,
+        "fields": {
+            "sneaker": 2,
+            "size": "7.5",
+            "price": "8700.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 5,
+        "fields": {
+            "sneaker": 3,
+            "size": "6",
+            "price": "8500.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 3
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 6,
+        "fields": {
+            "sneaker": 3,
+            "size": "7",
+            "price": "8700.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 7,
+        "fields": {
+            "sneaker": 3,
+            "size": "5",
+            "price": "8500.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 8,
+        "fields": {
+            "sneaker": 4,
+            "size": "6",
+            "price": "3300.00",
+            "is_sold_out": false,
+            "original_price": "4200.00",
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 9,
+        "fields": {
+            "sneaker": 4,
+            "size": "7",
+            "price": "3200.00",
+            "is_sold_out": false,
+            "original_price": "4200.00",
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 10,
+        "fields": {
+            "sneaker": 4,
+            "size": "9",
+            "price": "3300.00",
+            "is_sold_out": false,
+            "original_price": "4200.00",
+            "quantity": 3
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 12,
+        "fields": {
+            "sneaker": 5,
+            "size": "6",
+            "price": "4200.00",
+            "is_sold_out": false,
+            "original_price": "5500.00",
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 13,
+        "fields": {
+            "sneaker": 6,
+            "size": "6",
+            "price": "3400.00",
+            "is_sold_out": false,
+            "original_price": "4300.00",
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 14,
+        "fields": {
+            "sneaker": 6,
+            "size": "4",
+            "price": "3000.00",
+            "is_sold_out": false,
+            "original_price": "4000.00",
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 15,
+        "fields": {
+            "sneaker": 6,
+            "size": "7",
+            "price": "3400.00",
+            "is_sold_out": false,
+            "original_price": "4400.01",
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 16,
+        "fields": {
+            "sneaker": 7,
+            "size": "6",
+            "price": "5000.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 17,
+        "fields": {
+            "sneaker": 7,
+            "size": "7",
+            "price": "5000.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 18,
+        "fields": {
+            "sneaker": 7,
+            "size": "7.5",
+            "price": "4500.00",
+            "is_sold_out": true,
+            "original_price": "5000.00",
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 20,
+        "fields": {
+            "sneaker": 7,
+            "size": "8",
+            "price": "4500.00",
+            "is_sold_out": false,
+            "original_price": "5000.00",
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 21,
+        "fields": {
+            "sneaker": 7,
+            "size": "8.5",
+            "price": "4300.00",
+            "is_sold_out": true,
+            "original_price": "5000.00",
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 27,
+        "fields": {
+            "sneaker": 9,
+            "size": "8",
+            "price": "9000.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 28,
+        "fields": {
+            "sneaker": 10,
+            "size": "6",
+            "price": "5200.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 3
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 29,
+        "fields": {
+            "sneaker": 10,
+            "size": "7",
+            "price": "4900.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 30,
+        "fields": {
+            "sneaker": 10,
+            "size": "7.5",
+            "price": "4900.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 31,
+        "fields": {
+            "sneaker": 11,
+            "size": "7",
+            "price": "5500.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 32,
+        "fields": {
+            "sneaker": 12,
+            "size": "7.5",
+            "price": "5500.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 33,
+        "fields": {
+            "sneaker": 12,
+            "size": "10",
+            "price": "5500.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 34,
+        "fields": {
+            "sneaker": 13,
+            "size": "4.5",
+            "price": "4400.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 35,
+        "fields": {
+            "sneaker": 13,
+            "size": "5",
+            "price": "4400.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 36,
+        "fields": {
+            "sneaker": 13,
+            "size": "6",
+            "price": "4000.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 3
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 37,
+        "fields": {
+            "sneaker": 13,
+            "size": "7",
+            "price": "4200.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 38,
+        "fields": {
+            "sneaker": 14,
+            "size": "6.5",
+            "price": "5500.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 39,
+        "fields": {
+            "sneaker": 14,
+            "size": "7",
+            "price": "5500.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 40,
+        "fields": {
+            "sneaker": 14,
+            "size": "7.5",
+            "price": "5300.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 41,
+        "fields": {
+            "sneaker": 14,
+            "size": "8",
+            "price": "550.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 42,
+        "fields": {
+            "sneaker": 15,
+            "size": "7",
+            "price": "6000.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 43,
+        "fields": {
+            "sneaker": 15,
+            "size": "7.5",
+            "price": "6000.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 3
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 44,
+        "fields": {
+            "sneaker": 15,
+            "size": "9",
+            "price": "6000.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 45,
+        "fields": {
+            "sneaker": 15,
+            "size": "9.5",
+            "price": "5800.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakersize",
+        "pk": 46,
+        "fields": {
+            "sneaker": 16,
+            "size": "9",
+            "price": "15000.00",
+            "is_sold_out": false,
+            "original_price": null,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 1,
+        "fields": {
+            "sneaker": 1,
+            "image": "image/upload/v1755607191/izfs74hz0ba0udptyjtw.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 2,
+        "fields": {
+            "sneaker": 1,
+            "image": "image/upload/v1755607176/mxxddcdyx4frns05tebj.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 3,
+        "fields": {
+            "sneaker": 2,
+            "image": "image/upload/v1755607160/yt8os2gu5ta4qaqr5dso.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 4,
+        "fields": {
+            "sneaker": 2,
+            "image": "image/upload/v1755607151/bjrnaywbkxbn2xhxooba.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 5,
+        "fields": {
+            "sneaker": 3,
+            "image": "image/upload/v1755607137/mv87yaz0jr5nhi6lzhvf.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 6,
+        "fields": {
+            "sneaker": 3,
+            "image": "image/upload/v1755607126/luqxdhf0hhbamvxej5nk.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 12,
+        "fields": {
+            "sneaker": 4,
+            "image": "image/upload/v1755607102/uklckojqfjdox58kpkrr.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 13,
+        "fields": {
+            "sneaker": 4,
+            "image": "image/upload/v1755607092/l1mmmknhq3rnmgrnaxsz.jpg"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 14,
+        "fields": {
+            "sneaker": 5,
+            "image": "image/upload/v1755607074/z0difdzqmbdkxycoccan.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 17,
+        "fields": {
+            "sneaker": 7,
+            "image": "image/upload/v1755607053/cxjc1isrxvdwqfzww9mu.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 18,
+        "fields": {
+            "sneaker": 7,
+            "image": "image/upload/v1755607038/rxqgwkgtchlfobhnkcvj.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 21,
+        "fields": {
+            "sneaker": 9,
+            "image": "image/upload/v1755607009/c69uax9hylxr7ea7daeb.png"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 22,
+        "fields": {
+            "sneaker": 9,
+            "image": "image/upload/v1755606990/rlczcsinq7bmew4tuug4.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 23,
+        "fields": {
+            "sneaker": 12,
+            "image": "image/upload/v1755606907/pyyinku77ftjikcqrvty.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 24,
+        "fields": {
+            "sneaker": 12,
+            "image": "image/upload/v1755606896/bwe4mi3ee62asch2cx51.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 26,
+        "fields": {
+            "sneaker": 11,
+            "image": "image/upload/v1755606882/wiplyq5ig5ktu9pwib7y.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 27,
+        "fields": {
+            "sneaker": 11,
+            "image": "image/upload/v1755606871/cwgyqtlsxo342z4rjbcn.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 28,
+        "fields": {
+            "sneaker": 10,
+            "image": "image/upload/v1755606856/xv022btbkye5vgwtarrp.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 29,
+        "fields": {
+            "sneaker": 10,
+            "image": "image/upload/v1755606844/w12uwkgqicsl5qoqvrqe.webp"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 31,
+        "fields": {
+            "sneaker": 6,
+            "image": "image/upload/v1755606804/vpze3rcvnutb4rmjyaeh.png"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 32,
+        "fields": {
+            "sneaker": 6,
+            "image": "image/upload/v1755606788/r8w9fbjifmeitu8y7i9k.png"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 33,
+        "fields": {
+            "sneaker": 13,
+            "image": "image/upload/v1755606762/bucbnukdxku4zghen6zt.avif"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 34,
+        "fields": {
+            "sneaker": 13,
+            "image": "image/upload/v1755606749/n57xotnwtemdspopm4zx.avif"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 35,
+        "fields": {
+            "sneaker": 14,
+            "image": "image/upload/v1755606641/sgfucpxmv1umlhnsr1fr.avif"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 36,
+        "fields": {
+            "sneaker": 14,
+            "image": "image/upload/v1755606706/spdfyo5ur0o79r6dkoau.avif"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 37,
+        "fields": {
+            "sneaker": 15,
+            "image": "image/upload/v1755606669/eysdvhriewzlyor8zzbb.avif"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 38,
+        "fields": {
+            "sneaker": 15,
+            "image": "image/upload/v1755606601/qddrtrumsob8avlwplmo.avif"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 39,
+        "fields": {
+            "sneaker": 15,
+            "image": "image/upload/v1755606679/u0jcgxdawshzn4xzt2tr.avif"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 40,
+        "fields": {
+            "sneaker": 14,
+            "image": "image/upload/v1755606723/y4kqgrjpzfcatwlz2biq.avif"
+        }
+    },
+    {
+        "model": "store.sneakerimage",
+        "pk": 41,
+        "fields": {
+            "sneaker": 6,
+            "image": "image/upload/v1755606822/ardkdwshk4vcv2hu5rjm.png"
+        }
+    },
+    {
+        "model": "store.order",
+        "pk": 1,
+        "fields": {
+            "buyer": 1,
+            "total": "3300.00",
+            "created_at": "2025-08-10T03:54:15.996Z",
+            "status": "pending_payment",
+            "payment_reference": "",
+            "tracking_number": "",
+            "courier": "",
+            "released_at": null
+        }
+    },
+    {
+        "model": "store.order",
+        "pk": 2,
+        "fields": {
+            "buyer": 1,
+            "total": "3300.00",
+            "created_at": "2025-08-10T03:56:44.432Z",
+            "status": "pending_payment",
+            "payment_reference": "",
+            "tracking_number": "",
+            "courier": "",
+            "released_at": null
+        }
+    },
+    {
+        "model": "store.order",
+        "pk": 3,
+        "fields": {
+            "buyer": 1,
+            "total": "3300.00",
+            "created_at": "2025-08-10T04:43:17.478Z",
+            "status": "pending_payment",
+            "payment_reference": "",
+            "tracking_number": "",
+            "courier": "",
+            "released_at": null
+        }
+    },
+    {
+        "model": "store.order",
+        "pk": 4,
+        "fields": {
+            "buyer": 1,
+            "total": "3300.00",
+            "created_at": "2025-08-10T04:48:36.240Z",
+            "status": "pending_payment",
+            "payment_reference": "",
+            "tracking_number": "",
+            "courier": "",
+            "released_at": null
+        }
+    },
+    {
+        "model": "store.order",
+        "pk": 5,
+        "fields": {
+            "buyer": 2,
+            "total": "15000.00",
+            "created_at": "2025-08-13T22:28:47.755Z",
+            "status": "pending_payment",
+            "payment_reference": "",
+            "tracking_number": "",
+            "courier": "",
+            "released_at": null
+        }
+    },
+    {
+        "model": "store.orderitem",
+        "pk": 1,
+        "fields": {
+            "order": 1,
+            "sneaker_size": 8,
+            "quantity": 1,
+            "price": "3300.00"
+        }
+    },
+    {
+        "model": "store.orderitem",
+        "pk": 2,
+        "fields": {
+            "order": 2,
+            "sneaker_size": 8,
+            "quantity": 1,
+            "price": "3300.00"
+        }
+    },
+    {
+        "model": "store.orderitem",
+        "pk": 3,
+        "fields": {
+            "order": 3,
+            "sneaker_size": 10,
+            "quantity": 1,
+            "price": "3300.00"
+        }
+    },
+    {
+        "model": "store.orderitem",
+        "pk": 4,
+        "fields": {
+            "order": 4,
+            "sneaker_size": 8,
+            "quantity": 1,
+            "price": "3300.00"
+        }
+    },
+    {
+        "model": "store.orderitem",
+        "pk": 5,
+        "fields": {
+            "order": 5,
+            "sneaker_size": 46,
+            "quantity": 1,
+            "price": "15000.00"
+        }
+    }
+]
