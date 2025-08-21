@@ -28,8 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY', 'fallback-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False').lower() in ('true', '1', 't')
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
+DEBUG = config('DEBUG', 'False').lower() in ('true', '1', 't')
+ALLOWED_HOSTS = [host.strip() for host in config('ALLOWED_HOSTS', '').split(',') if host.strip()]
+
 
 
 # Application definition
@@ -43,8 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'store',
     # Saves pictures to cloud 
-    'cloudinary',
     'cloudinary_storage',
+    'cloudinary',
+    
 ]
 
 MIDDLEWARE = [
@@ -82,10 +84,19 @@ WSGI_APPLICATION = 'soulsoles_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+#DATABASES = {
+#    "default": {
+#        "ENGINE": "django.db.backends.sqlite3",
+#        "NAME": BASE_DIR / "db.sqlite3",
+#    }
+#}
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
-    )    
+   'default': dj_database_url.config(
+        default=config("DATABASE_URL"),
+        conn_max_age=600,
+        ssl_require=not DEBUG
+    )
 }
 
 
@@ -147,6 +158,5 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_URL = '/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_REDIRECT_URL = 'home' # Direct home after logging in
 LOGOUT_REDIRECT_URL = 'home' # Direct home after logging out
