@@ -29,13 +29,12 @@ def checkout_successful(request, order_id):
 def shop(request):
     sneakers = Sneaker.objects.all()
     return render(request, 'store/shop.html', {'sneakers': sneakers})
+    print("Available sizes for:", sneaker.name, available_sizes)  # DEBUG
 
 # Sneaker detail page view showing sneaker info and available sizes
 def sneaker_detail(request, pk):
     sneaker = get_object_or_404(Sneaker, pk=pk)
     images = sneaker.images.all()
-    print("Available sizes for:", sneaker.name, available_sizes)  # DEBUG
-
 
     # Get all sizes that are NOT sold out
     available_sizes = [size for size in sneaker.sizes.all() if not size.is_sold_out]
