@@ -1,0 +1,52 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Your Shopping Cart</h2>
+<!--check through to check if cart is empty-->
+{% if cart_items %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Sneaker</th>
+        <th>Size</th>
+        <th>Price (each)</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in cart_items %}
+      <tr>
+        <td>{{ item.sneaker_size.sneaker.name }}</td>
+        <td>{{ item.sneaker_size.size }}</td>
+        <td>R {{ item.sneaker_size.price }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>R {{ item.subtotal }}</td>
+        <td>
+          <form method="post" action="{% url 'remove_from_cart' item.id %}">
+            {% csrf_token %} 
+            <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+      <tr>
+        <td colspan="4" class="text-end"><strong>Total:</strong></td>
+        <td><strong>R {{ total }}</strong></td>
+      </tr>
+    </tbody>
+  </table>
+{% else %}
+  <p>Your cart is empty.</p>
+{% endif %}
+
+<a href="{% url 'shop' %}" class="btn btn-primary">Continue Shopping</a>
+<!--If cart empty ,Do not showcase checkout button-->
+{% if cart_items %}
+  <a href="{% url 'checkout' %}" class="btn btn-success">Checkout</a>
+{% else %}
+<p>Your cart is empty, Add some items before checking out.</p>
+{% endif %}
+{% endblock %}

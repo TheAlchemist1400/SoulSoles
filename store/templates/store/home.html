@@ -1,0 +1,40 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<canvas id="sneaker-bg"></canvas>
+<!--Test-->
+<div class="floating-rotating"></div>
+
+<div class="home-content-container">
+    <h1 class = "text-center">Welcome to SoulSoles.co </h1>
+    <p class = "text-center subtitle">Your home for exclusive and rare sneakers.</p>
+    <p class = "text-center subtitle">Soles for the soul that soothe your soul.</p>
+    <p class = "text-center">
+        At SoulSoles.co, We specialize in sourcing premium, exclusive sneakers — offering South African buyers access to global fashion without compromise.
+        <br>We believe in trust, not risk — which is why payment is held safely through our escow service until your order is delivered,
+        whether you're investing in style or collecting rare drops.<br> SoulSoles.co guarantees authenticity, transparency, and peace of of mind with every purchase
+    </p>
+
+    <p class = "text-center"><b>Mission Statement</b></p>
+    <p class = "text-center">To provide South African sneaker lovers with direct access to exclusive abroad sneaker releases— through a premium, secure, and transparent buying experience.</p><br>
+
+    <p class = "text-center"><b>Vision Statement</b></p>
+    <p class = "text-center">To become South Africa’s leading trusted sneaker destination — where global style meets local reliability, and every buyer shops with confidence.</p><br>
+
+    <p class = "text-center"><b>Global Luxury.Local Access. Secured by trust</b></p>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const modelPath = "{% static 'models/shoebox.glb' %}";
+</script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.154.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="{% static 'store/js/threejs-home.js' %}"></script>
+{% endblock %}

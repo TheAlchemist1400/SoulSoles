@@ -1,0 +1,57 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>Sourcing with us</h1><br>
+<!--<h2>Request a Sneaker Sourcing</h2>-->
+<h3>Tell us which sneaker you want and we'll find it for you</h3><br>
+
+<form method = "POST">
+    {% csrf_token %}
+
+    <!-- Sneaker name -->
+    <div class="mb-3">
+        <label for = "name" class="form-label">Name of the Sneaker</label>
+        <!-- -->
+        <input type="text" name="sneaker_name" id="id_sneaker_name" class="form-control" required>
+    </div>
+
+    <!-- Sizes-->
+    <div class="mb-3">
+        <label class="form-label">Select up to 3 Sizes:</label>
+        <div id="size-options" style="display: flex; flex-wrap: wrap; gap: 10px;">
+            {% for size in sizes_options %}
+                <label style="border: 1px solid #ccc; padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+                    <input type="checkbox" name="sizes[]" value="{{ size }}" class="size-checkbox" style="margin-right: 6px;">
+                    {{ size }}
+                </label>
+            {% endfor %}
+        </div>
+    </div>
+
+    <button type="submit" class= "btn btn-success">Submit Request</button>
+</form>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+{% endif %}        
+<script>
+    //Limit user to three sizes to check
+    document.querySelectorAll('.size-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            let checkedCount = document.querySelectorAll('.size-checkbox:checked').length;
+            if (checkedCount > 3) {
+                checkbox.checked = false;
+                alert("You can select up to 3 sizes only.");
+            }
+        });
+    });
+</script>
+
+{% for message in messages %}
+    <div class="alert alert-info">{{ message }}</div>
+{% endfor %}    
+{% endblock %}
