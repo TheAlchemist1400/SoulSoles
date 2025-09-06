@@ -18,4 +18,5 @@ def create_superuser(sender, **kwargs):
             password = "StrongPassword123!")
     
     print("Superuser created: adminfix / StrongPassword123!")
+
  
