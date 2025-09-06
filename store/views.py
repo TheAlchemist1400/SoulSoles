@@ -5,6 +5,9 @@ from django.contrib.auth import authenticate, logout, login
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import LoginForm, RegisterForm, SourcingRequestForm
+from django.http import JsonResponse
+from django.conf import settings
+import os
 
 # Home page view
 def home(request):
@@ -225,5 +228,10 @@ def sourcing(request):
         "sizes_options": sizes_options
         })
 
+def debug_db(request):
+    return JsonResponse({
+        "env_DATABASE_URL": os.environ.get("DATABASE_URL"),
+        "settings_DATABASES": settings.DATABASES,
+    })
     
                 

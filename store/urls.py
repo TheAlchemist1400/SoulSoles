@@ -19,4 +19,5 @@ urlpatterns = [
     path('sourcing/', views.sourcing, name = 'sourcing'),
     path('checkout-successful/<int:order_id>/', views.checkout_successful, name = 'checkout_successful'),
     path('orders/', views.account_orders, name = 'account_orders'),
+    path("debug-db/", views.debug_db),
 ]
