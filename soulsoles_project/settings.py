@@ -31,7 +31,14 @@ SECRET_KEY = config('SECRET_KEY', 'fallback-secret-key')
 DEBUG = config('DEBUG', 'False').lower() in ('true', '1', 't')
 ALLOWED_HOSTS = [host.strip() for host in config('ALLOWED_HOSTS', '').split(',') if host.strip()]
 
-
+# NeonTexh db
+DATABASES = {
+   'default': dj_database_url.config(
+        default=config("DATABASE_URL"),
+        conn_max_age=600,
+        ssl_require=not DEBUG
+    )
+}
 
 # Application definition
 
@@ -44,9 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'store',
     # Saves pictures to cloud 
-    'cloudinary_storage',
     'cloudinary',
-    
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +67,33 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'soulsoles_project.urls'
+WSGI_APPLICATION = 'soulsoles_project.wsgi.application'
+
+# Static files
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'store', 'static')
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Cloudinary
+cloudinary.config(
+    cloud_name =config('CLOUD_NAME'),
+    api_key =config('CLOUD_API_KEY'),
+    api_secret =config('CLOUD_API_SECRET')    
+) 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+SESSION_ENGINE = "django.contrib.sessions.backends.db"  # store in DB
+
+# Internationalization
+# https://docs.djangoproject.com/en/5.2/topics/i18n/
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'UTC'
+USE_I18N = True
+USE_TZ = True
+
 
 TEMPLATES = [
     {
@@ -78,7 +111,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'soulsoles_project.wsgi.application'
+
 
 
 # Database
@@ -90,15 +123,6 @@ WSGI_APPLICATION = 'soulsoles_project.wsgi.application'
 #        "NAME": BASE_DIR / "db.sqlite3",
 #    }
 #}
-
-DATABASES = {
-   'default': dj_database_url.config(
-        default=config("DATABASE_URL"),
-        conn_max_age=600,
-        ssl_require=not DEBUG
-    )
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -118,44 +142,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
-USE_TZ = True
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'store', 'static')  # adjust if your app is named differently
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# Cloudinary
-cloudinary.config(
-    cloud_name =config('CLOUD_NAME'),
-    api_key =config('CLOUD_API_KEY'),
-    api_secret =config('CLOUD_API_SECRET')    
-) 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-SESSION_ENGINE = "django.contrib.sessions.backends.db"  # store in DB
 
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_URL = '/'
