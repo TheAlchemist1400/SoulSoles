@@ -2,7 +2,7 @@ body {
     margin: 0;
     overflow: hidden;
     background-color: #ccc5c5;
-    color: white;
+    color: black;
     font-family: Arial, sans-serif;
 }
 
@@ -29,7 +29,7 @@ body {
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 
-        color: white;
+        color: darkgray;
     }
 
 .subtitle {
