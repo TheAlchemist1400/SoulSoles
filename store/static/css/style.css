@@ -14,28 +14,33 @@ body {
     height: 100%;
     z-index: -1;
 }
-    .home-content-container {
-        position: relative;
-        z-index: 10;
-        max-width: 95%;
-        margin: 0 auto;
-        padding: 20px;
+.home-content-container {
+    position: relative;
+    z-index: 10;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
 
-        background-color: rgba(255, 255, 255, 0.876);
-        backdrop-filter: blur(10px); /* Glass blur */
-        -webkit-backdrop-filter: blur(10px); /* Ensures safari support */
+    background-color: rgba(255, 255, 255, 0.876);
+    backdrop-filter: blur(10px); /* Glass blur */
+    -webkit-backdrop-filter: blur(10px); /* Ensures safari support */
 
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 
-        color: darkgray;
-    }
+    color: darkgray;
+}
 
 .subtitle {
     color: lightgray;
 }
-
+.text-center {
+    color: black;
+}
+.text-end {
+    color: blue;
+}
 
 .floating-rotating {
     width: 100px;
