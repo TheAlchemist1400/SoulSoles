@@ -1,3 +1,4 @@
+```css
 body {
     margin: 0;
     overflow: hidden;
@@ -6,55 +7,91 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Background */
 #sneaker-bg {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
 }
+
+/* Main content */
 .home-content-container {
     position: relative;
     z-index: 10;
-    max-width: 95%;
-    margin: 0 auto;
+
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
 
     background-color: rgba(255, 255, 255, 0.876);
-    backdrop-filter: blur(10px); /* Glass blur */
-    -webkit-backdrop-filter: blur(10px); /* Ensures safari support */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 
     color: darkgray;
+    box-sizing: border-box;
 }
 
 .subtitle {
-    color: lightgray;
+    color: #666;
 }
+
 .text-center {
     color: black;
 }
+
 .text-end {
     color: blue;
 }
 
+/* Floating blue box */
 .floating-rotating {
     width: 100px;
     height: 100px;
+
     background-color: blue;
+
     position: fixed;
+    left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
 
-
-    animation: rotate 5s linear infinite, float 3s ease-in-out infinite;
+    animation:
+        rotate 5s linear infinite,
+        float 3s ease-in-out infinite;
 }
 
-/* Adjust to tablets and phones */
+/* Rotation */
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Floating movement */
+@keyframes float {
+    0%,
+    100% {
+        top: 50%;
+    }
+
+    50% {
+        top: 45%;
+    }
+}
+
+/* Tablets */
 @media (max-width: 1024px) {
     .home-content-container {
         padding: 30px;
@@ -67,9 +104,10 @@ body {
     }
 }
 
+/* Phones */
 @media (max-width: 768px) {
     .home-content-container {
-        max-width: 95%;
+        width: 95%;
         padding: 20px;
         margin: 20px auto;
         font-size: 14px;
@@ -81,6 +119,7 @@ body {
     }
 }
 
+/* Small phones */
 @media (max-width: 480px) {
     .home-content-container {
         padding: 15px;
@@ -92,14 +131,4 @@ body {
         height: 50px;
     }
 }
-
-/* Floating blue box */
-@keyframes rotate {
-    from {transform: translate(-50, -50) rotate(0deg); }
-    to  {transform: translate(-50, -50) rotate(360deg); }
-}
-
-@keyframes float {
-    0%, 100% {top: 50%; }
-    50% {top: 45%; }
-}
+```
